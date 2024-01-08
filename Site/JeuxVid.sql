@@ -133,7 +133,8 @@ UPDATE article
 
 DROP TABLE IF EXISTS jeux_stats;
 CREATE TABLE IF NOT EXISTS jeux_stats (
-  id INT REFERENCES article (id),
+  id_article INT REFERENCES article (id),
+  date DATE,
   qte_ajoutee INT,
   qte_achetee INT
 );
@@ -216,4 +217,3 @@ CREATE TABLE IF NOT EXISTS panier_article (
   prix_ttc NUMERIC(10,2) NOT NULL
   --PRIMARY KEY (id_panier, id_article)
 );
-
