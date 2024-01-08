@@ -6,6 +6,7 @@
     <body>
         <div class="page">
 
+
             <!-- le bloc qui contient le titre  -->
             <div class="titre">
                 <div class="titre_logo"><img src="img_site/icone-site.gif"></div>
@@ -24,6 +25,20 @@
                     <button class="bouton">S'INSCRIRE</button>
                     <button class="bouton">CONNEXION</button>
                 </div> 
+            </div>
+
+            <!-- le bloc de la barre laterale -->
+            <div class="barre">
+                <div class="barre_titre">
+                    CATÉGORIE
+                </div>
+                <div style="margin-left: 15px;">
+                    <?php
+                        $db = seconnecter("localhost", "postgres", "S0314", "jeux-videos", 5432);
+                        afficher_barre_categorie($db);
+                        se_deconnecter($db);
+                    ?>
+                </div>
             </div>
 
             <!-- le bloc qui contient le contenu dynamique du site; peut contenir  {categorie, liste des articles de chaque catégorie} -->
@@ -78,12 +93,6 @@
 <?php 
 
     //fonction qui se connecte à la base de données 
-    //function seconnecter($nom_host, $nom_util, $mdp, $bdd, $port){
-    //    $db = mysqli_connect($nom_host, $nom_util, $mdp, $bdd, $port) or die("Error SQL:".mysqli_error($db)); // se connecter à la base 
-    //    $db -> query("SET NAMES UTF8");
-//
-    //    return $db; // On retourne un pointeur vers la base de données
-    //}
     function seconnecter($nom_host, $nom_util, $mdp, $bdd, $port) {
         try {
             $db = new PDO("pgsql:host=$nom_host;port=$port;dbname=$bdd;user=$nom_util;password=$mdp");
@@ -98,13 +107,37 @@
     // fonction qui se deconnecte de la base de données
     function se_deconnecter($db){
         $db = null;
-    }    
+    }
+
+    function afficher_barre_categorie($db){
+        $sql = "SELECT libelle FROM categorie"; // Requête SQL pour récupérer les catégories
+        $resultat = $db->query($sql);
+    
+        if ($resultat) {
+            $html = ''; // Ouvrir la div pour les catégories
+    
+            while ($table = $resultat->fetch(PDO::FETCH_ASSOC)) {
+                $libelle = $table['libelle'];
+                $html .= '<div class="barre_texte">';
+                $html .= '<div style="margin-bottom: 7px; margin-top: 7px;">';
+                $html .= '<a class="barre_titre" href="index.php?categorie='.$libelle.'">'.$libelle.'</a>';
+                $html .= '</div>';
+                $html .= '</div>';
+            }
+    
+            echo $html; // Affichage des catégories
+        } else {
+            echo "Aucune catégorie trouvée.";
+        }
+    }
+    
+    
 
 
     // fonction qui affiche les differents catégories existantes depuis un base de données 
     function afficher_categories($db){
         $sql = "SELECT * FROM categorie"; // Requête SQL pour récupérer les catégories
-        $resultat = $db->query($sql); // Exécute la requête --> la ligne 108
+        $resultat = $db->query($sql); // Exécute la requête
         
         echo '<div class="grid1">';
         // Boucle pour afficher les catégories dans la première grille (grid1)

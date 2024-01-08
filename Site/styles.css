@@ -5,6 +5,7 @@ body{
     background-color: #333;
     border: 0px;
     background-image: url("img_site/fond-wide-1200px.gif");
+    background-attachment: fixed;
 }
 
 .page{
@@ -36,7 +37,6 @@ body{
     background-color:#fff;
     color:#092435;
     height:26px;
-    /*border: none;*/
     border:2px solid #092435;
     border-radius: 5px;
     padding:3px 10px 3px 10px;
@@ -54,9 +54,44 @@ body{
 }
 
 
+/*=========================================================La barre===============================================================*/
+.barre{
+    border: 3px solid #092435;
+    border-radius: 5px;
+    width: 14%;
+    height: 500px;
+}
+
+.barre_titre{
+    font-family: "zorque";
+    font-weight: bolder;
+    font-size: 22px;
+    color: #092435;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    padding-left: 3px;
+    border-bottom: 3px solid #092435;
+}
+
+.barre_texte a {
+    font-size: 1.1rem;
+    font-weight: lighter;
+    text-decoration: none;
+    border: none;
+}
+
+.barre_texte:hover{
+    text-decoration: underline; /* Ajouter un soulignement au survol */
+}
+
+.barre_texte:active{
+    font-size: 1rem;
+}
+
+
 /*=====================================================Le titre de la page========================================================*/
 .titre{
-    width: 70%;
+    width: 75%;
     height: 175px;
     float: left;
     display: flex;
@@ -80,7 +115,7 @@ body{
 
 /*=====================================================authentification========================================================*/
 .authentification{
-    width: 30%;
+    width: 25%;
     height: 175px;
     float: right;
     margin-top: 40px;
@@ -123,7 +158,7 @@ body{
 
 /*===================================================== menu ========================================================*/
 .contenu{
-    width: 70%;
+    width: 60%;
     height: 500px;
 }
 
@@ -258,7 +293,7 @@ body{
 
 /*=====================================================panier========================================================*/
 .panier{
-    width: 30%;
+    width: 25%;
     height: 500px;
     float: left;
 }
@@ -275,7 +310,6 @@ body{
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    margin-right: 15px;
     min-height: 100px;
 }
 
@@ -334,7 +368,7 @@ body{
     }
 
     .authentification{
-        width: 30%;
+        width: 25%;
         height: 175px;
     }
 
