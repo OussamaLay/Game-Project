@@ -3,16 +3,17 @@
 /*style du body et du mise en page*/
 body{
     background-color: #333;
+    border: 0px;
+    background-image: url("img_site/fond-wide-1200px.gif");
 }
 
 .page{
     display: flex;
     flex-wrap:wrap;
     margin: auto;
-    background-image: url("img_site/fond-wide-1200px.gif");
-    max-width: 1200px;
-    height: 100vh;
-
+    background-size: cover;
+    background-position: center;
+    max-width: 1300px;
 }
 
 @font-face {
@@ -35,8 +36,9 @@ body{
     background-color:#fff;
     color:#092435;
     height:26px;
-    border: none;
-    border-bottom:2px solid #092435;
+    /*border: none;*/
+    border:2px solid #092435;
+    border-radius: 5px;
     padding:3px 10px 3px 10px;
     margin:3px 10px 3px 10px;
     font-family:"TytoonMist";
@@ -86,6 +88,7 @@ body{
 
 .login{
     background-color: #4494cb;
+    border-radius: 5px;
     height: 50%;
     padding-right: 30px;
     margin-right: 15px;
@@ -197,7 +200,7 @@ body{
 .jeux_conteneur
 {
     background: linear-gradient(#fff,#d8d8d8);
-    border-radius: 75px 0px 0px 75px;
+    border-radius: 10px;
     height: 160px;
     display: flex;
     flex-direction: row;
@@ -269,6 +272,7 @@ body{
 .panier_conteneur{
     background: linear-gradient(#fff,#d8d8d8);
     border: 3px solid #092435;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     margin-right: 15px;
