@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS jeux_stats (
 
 -- il faut récupérer le chemain absolu du fichier client.csv s'il y a un erreur
 --COPY jeux_stats FROM 'C:\xampp\htdocs\JeuVideo\DataAnalys\jeux_stats.csv' DELIMITER ',' CSV HEADER;
-COPY jeux_stats FROM 'C:\xampp\htdocs\JeuVideo\Game-Project\DataAnalys\jeux_stats.csv' DELIMITER ',' CSV HEADER;
+COPY jeux_stats FROM 'C:\xampp\htdocs\Game-Project\DataAnalys\jeux_stats.csv' DELIMITER ',' CSV HEADER;
 --C:\xampp\htdocs\JeuVideo\Game-Project\DataAnalys\jeux_stats.csv
 
 
@@ -176,7 +176,7 @@ INSERT INTO client (id, prenom, nom, pwd, age, job, adresse, phoneNumber, email)
 (1, 'Dupont', 'Pierre', 'Bv8%~7T-O+k}r{pb', 55, 'Proffesseur', 'Campus des Cézeaux', '+33612345678','pierre.dupont@truc.fr');
 
 -- il faut récupérer le chemain absolu du fichier client.csv s'il y a un erreur
-COPY client FROM 'C:\xampp\htdocs\JeuVideo\Game-Project\DataAnalys\client.csv' DELIMITER ',' CSV HEADER;
+COPY client FROM 'C:\xampp\htdocs\Game-Project\DataAnalys\client.csv' DELIMITER ',' CSV HEADER;
 
 -- --------------------------------------------------------
 

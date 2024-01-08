@@ -44,7 +44,6 @@
             <!-- le bloc qui contient le contenu dynamique du site; peut contenir  {categorie, liste des articles de chaque catégorie} -->
             <div class="contenu">
                 <?php
-                    #$db = seconnecter("localhost", "jeux-videos", "IsImA_2023/%", "jeux_videos", 3307);
                     $db = seconnecter("localhost", "postgres", "S0314", "jeux-videos", 5432);
                     if(isset($_GET['categorie'])) {
                         $categorie = $_GET['categorie'];
