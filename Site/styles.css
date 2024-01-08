@@ -1,0 +1,371 @@
+/*style du site web*/
+/*-----------------*/
+/*style du body et du mise en page*/
+body{
+    background-color: #333;
+}
+
+.page{
+    display: flex;
+    flex-wrap:wrap;
+    margin: auto;
+    background-image: url("img_site/fond-wide-1200px.gif");
+    max-width: 1200px;
+    height: 100vh;
+
+}
+
+@font-face {
+    font-family : "zorque";
+    src:url("font/zorque.otf") format("truetype");
+}
+
+@font-face {
+    font-family : "calibri";
+    src:url("font/calibri.ttf") format("truetype");
+}
+
+@font-face {
+    font-family : "TytoonMist";
+    src:url("font/tytoon_mist.ttf") format("truetype");
+}
+
+
+.bouton{ 
+    background-color:#fff;
+    color:#092435;
+    height:26px;
+    border: none;
+    border-bottom:2px solid #092435;
+    padding:3px 10px 3px 10px;
+    margin:3px 10px 3px 10px;
+    font-family:"TytoonMist";
+    font-weight:normal;
+    font-size:18px;
+    text-align: center;
+}
+
+.bouton:hover   {
+    background-color:#092435;
+    border-bottom:2px solid #fff;
+    color:#fff;
+}
+
+
+/*=====================================================Le titre de la page========================================================*/
+.titre{
+    width: 70%;
+    height: 175px;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.titre_logo img{
+    float: left;
+    width : 150px;
+}
+
+.titre-1{
+    font-family: "zorque";
+    font-size: 50px;
+    letter-spacing: 2px;
+    padding-left: 5px;
+}
+
+
+/*=====================================================authentification========================================================*/
+.authentification{
+    width: 30%;
+    height: 175px;
+    float: right;
+    margin-top: 40px;
+}
+
+.login{
+    background-color: #4494cb;
+    height: 50%;
+    padding-right: 30px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.bouton_center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+
+.input{
+    background-color:#fff;
+    color:#092435;
+    height:26px;
+    border-bottom:2px solid #092435;
+    padding:3px 10px 3px 10px;
+    margin:3px 10px 3px 10px;
+    font-family:"TytoonMist";
+    font-weight:normal;
+    font-size:18px;
+    text-align: center;
+}
+
+
+/*===================================================== menu ========================================================*/
+.contenu{
+    width: 70%;
+    height: 500px;
+}
+
+.contenu label{
+    font-family: "zorque";
+    text-align: center;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding-bottom: 30px;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+/*--*/
+.cat{
+    text-align: center;
+}
+.cadre{
+    border: 2px solid black;
+    background-color: #4494cb;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.cadre:hover{
+    background-color:#092435;
+}
+
+.cadre img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: cover;
+}
+
+/*===========================================styles pour la listes des jeux========================================*/
+.scrolleur{
+    height: 380px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    gap: 40px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+
+.panier_scroller::-webkit-scrollbar,
+.scrolleur::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #092435;
+}
+
+.panier_scroller::-webkit-scrollbar-thumb,
+.scrolleur::-webkit-scrollbar-thumb {
+    background: #fff;
+    border: 2px solid #092435;
+    border-radius: 5px;
+}
+
+.jeux_conteneur
+{
+    background: linear-gradient(#fff,#d8d8d8);
+    border-radius: 75px 0px 0px 75px;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.jeux{
+    flex: 1;
+}
+
+.jeux img{
+    height: 140px;
+    width: 100px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.infos{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.partie_info{
+    flex: 3;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.prtie_commander{
+    flex: 1;
+}
+
+.nom_jeu{
+    font-family: "zorque";
+}
+
+.info_jeu{
+    font-family:calibri;
+    color:#4494cb;
+}
+
+.prix_jeu{
+    font-family: "zorque";
+    color: #4494cb;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/*=====================================================panier========================================================*/
+.panier{
+    width: 30%;
+    height: 500px;
+    float: left;
+}
+
+.panier hr {
+    border: none;
+    border-top: 1px solid #acaaaa;
+    margin: 0px 0;
+}
+
+.panier_conteneur{
+    background: linear-gradient(#fff,#d8d8d8);
+    border: 3px solid #092435;
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    min-height: 100px;
+}
+
+.panier_scroller{
+    overflow: auto;
+    max-height: 350px;
+}
+
+.panier_titre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.panier_conteneur img{
+    width: 35px;
+    height:auto;
+}
+
+.article_text{
+    font-family: "calibri";
+    color: #092435;
+    font-weight: bold;
+}
+
+.prix_text{
+    font-family: "calibri";
+    color: #092435;
+    font-weight: bold;
+    text-align: end;
+}
+
+.panier_titre_texte{
+    font-family: "calibri";
+    color: #092435;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 5px;
+    width: auto;
+    box-sizing: border-box;
+    letter-spacing: 4px;
+    word-spacing: 4px;
+}
+
+
+
+/*=====================================================adaptation aux différents écrans========================================================*/
+
+
+/*La mise en page pour une tablette*/
+@media (min-width : 750px) and (max-width : 1200px){
+    .titre{
+        width: 70%;
+        height: 175px;
+    }
+
+    .authentification{
+        width: 30%;
+        height: 175px;
+    }
+
+    .contenu{
+        width: 70%;
+        height: 500px;
+    }
+    
+    .panier{
+        width: 30%;
+        height: 500px;
+    }
+}
+/*La mise en page pour un telephone*/
+@media (max-width : 750px) {
+    .titre{
+        width: 100%;
+    }
+    
+    .authentification{
+        width: 100%;
+    }
+
+    .login{
+        align-items: center;
+    }
+
+    .contenu{
+        width: 100%;
+    }
+    
+    .panier{
+        width: 100%;
+    }
+    .panier_conteneur{
+        width: 100%;
+    }
+}
