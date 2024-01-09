@@ -38,3 +38,5 @@ python Data/CsvToPgSQL.py
 Le site web est disponible via le lien : `http://localhost/Game-Project/Site/`
 
 
+![Image 1](capture1.png)
+![Image 2](capture2.png)
