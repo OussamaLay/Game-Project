@@ -34,7 +34,7 @@
                 </div>
                 <div style="margin-left: 15px;">
                     <?php
-                        $db = seconnecter("localhost", "postgres", "S0314", "jeux-videos", 5432);
+                        $db = seconnecter("localhost", "gamer", "00000", "jeux-videos", 5432);
                         afficher_barre_categorie($db);
                         se_deconnecter($db);
                     ?>
@@ -44,7 +44,7 @@
             <!-- le bloc qui contient le contenu dynamique du site; peut contenir  {categorie, liste des articles de chaque catégorie} -->
             <div class="contenu">
                 <?php
-                    $db = seconnecter("localhost", "postgres", "S0314", "jeux-videos", 5432);
+                    $db = seconnecter("localhost", "gamer", "00000", "jeux-videos", 5432);
                     if(isset($_GET['categorie'])) {
                         $categorie = $_GET['categorie'];
                         $categories = ['sport', 'combat', 'horreur', 'simulation', 'aventure'];
@@ -67,7 +67,7 @@
                     </div>
                     <hr>
                     <?php
-                        $db = seconnecter("localhost", "postgres", "S0314", "jeux-videos", 5432);
+                        $db = seconnecter("localhost", "gamer", "00000", "jeux-videos", 5432);
                         if(isset($_POST['vider_panier'])){
                                 supprimePanier($db);
                                 if (!panierNonVide($db)){

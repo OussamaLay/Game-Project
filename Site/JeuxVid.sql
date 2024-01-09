@@ -144,9 +144,7 @@ CREATE TABLE IF NOT EXISTS jeux_stats (
 --
 
 -- il faut récupérer le chemain absolu du fichier client.csv s'il y a un erreur
---COPY jeux_stats FROM 'C:\xampp\htdocs\JeuVideo\DataAnalys\jeux_stats.csv' DELIMITER ',' CSV HEADER;
-COPY jeux_stats FROM 'C:\xampp\htdocs\Game-Project\DataAnalys\jeux_stats.csv' DELIMITER ',' CSV HEADER;
---C:\xampp\htdocs\JeuVideo\Game-Project\DataAnalys\jeux_stats.csv
+COPY jeux_stats FROM 'C:\xampp\htdocs\Game-Project\Data\jeux_stats.csv' DELIMITER ',' CSV HEADER;
 
 
 -- --------------------------------------------------------
@@ -176,30 +174,7 @@ INSERT INTO client (id, prenom, nom, pwd, age, job, adresse, phoneNumber, email)
 (1, 'Dupont', 'Pierre', 'Bv8%~7T-O+k}r{pb', 55, 'Proffesseur', 'Campus des Cézeaux', '+33612345678','pierre.dupont@truc.fr');
 
 -- il faut récupérer le chemain absolu du fichier client.csv s'il y a un erreur
-COPY client FROM 'C:\xampp\htdocs\Game-Project\DataAnalys\client.csv' DELIMITER ',' CSV HEADER;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `panier`
---
-/*
-DROP TABLE IF EXISTS panier;
-CREATE TABLE IF NOT EXISTS panier (
-  id SERIAL PRIMARY KEY,
-  date_creation TIMESTAMP DEFAULT current_timestamp,
-  id_client INT NOT NULL REFERENCES client (id),
-  id_session INT NOT NULL
-);
-
-
---
--- Déchargement des données de la table `panier`
---
-
-INSERT INTO panier (id, id_client, id_session) VALUES
-(1, 1, 1);
-*/
+COPY client FROM 'C:\xampp\htdocs\Game-Project\Data\client.csv' DELIMITER ',' CSV HEADER;
 
 -- --------------------------------------------------------
 
