@@ -1,6 +1,6 @@
 # Projet de Jeu
 
-Ce projet nécessite l'installation de XAMPP.
+Ce projet nécessite l'installation de [XAMPP](https://www.apachefriends.org/fr/download.html) et [PostgreSQL](https://www.postgresql.org/download/).
 
 ### Étapes d'installation :
 1. Installer XAMPP.
