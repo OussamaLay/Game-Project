@@ -1,4 +1,4 @@
-# Projet de Jeu
+# Site de vente des jeux-vidéo
 
 ## L'application web
 
