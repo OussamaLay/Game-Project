@@ -1,5 +1,7 @@
 # Projet de Jeu
 
+## L'application web
+
 Ce projet nécessite l'installation de [XAMPP](https://www.apachefriends.org/fr/download.html) et [PostgreSQL](https://www.postgresql.org/download/).
 
 ### Étapes d'installation :
@@ -36,6 +38,21 @@ python Data/CsvToPgSQL.py
 
 ### Accès au site web :
 Le site web est disponible via le lien : `http://localhost/Game-Project/Site/`
+
+## L'analyse des Ventes avec Power BI :
+
+Le dashboard Power BI fournit une vision détaillée des performances de ventes de jeux vidéo, extraites du site web de commerce. Voici quelques points clés de l'analyse effectuée :
+
+- **Catégories de Jeux Populaires :** Une visualisation interactive permet de découvrir les catégories de jeux les plus appréciées par les clients, aidant à cibler efficacement les préférences du public.
+
+- **Années Performantes :** Le dashboard met en lumière les années les plus performantes en termes de ventes, permettant une réflexion sur les facteurs qui ont contribué à ces succès.
+
+- **Top Jeux Vendus :** Une section dédiée aux jeux les plus vendus offre une perspective sur les titres qui ont connu le plus grand succès commercial.
+
+- **Analyse des Tranches d'Âge :** Une visualisation des tranches d'âge des clients permet de mieux comprendre le public cible, facilitant ainsi le ciblage marketing.
+
+L'intégration de ces analyses offre une compréhension approfondie des tendances du marché des jeux vidéo, guidant ainsi les décisions stratégiques pour maximiser les performances de vente.
+
 
 
 ![Image 1](capture1.png)
